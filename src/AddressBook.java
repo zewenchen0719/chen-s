@@ -13,7 +13,11 @@ public class AddressBook {
 	}
 	
 	public void removeBuddy(int x){
-		B.remove(x);
+		
+		if(x>=0 && x< B.size()  ) {
+			B.remove(x);
+			
+		}
 	}
 	
 	public static void main(String[] args) {
@@ -22,6 +26,5 @@ public class AddressBook {
 		AB.addBuddy(bi);
 		bi.setName("chen");
 		System.out.println(bi.getName());
-
 	}
 }
